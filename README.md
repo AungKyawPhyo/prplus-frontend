@@ -1,69 +1,81 @@
-# React + TypeScript + Vite
+PR+ Event Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack event management platform with FastAPI + GraphQL backend and React (Vite + TypeScript) frontend, featuring secure authentication, role-based authorization, and a modern responsive UI.
 
-Currently, two official plugins are available:
+⸻
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Features
 
-## Expanding the ESLint configuration
+✅ Authentication & Authorization
+	•	JWT-based authentication.
+	•	Protected routes with role-based access control.
+	•	Logout with complete token clearance.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ User Management
+	•	Manager: Create, update, delete users.
+	•	Staff: View-only for users.
+	•	Password change functionality for all users.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+✅ Event Management
+	•	Manager: Full CRUD on events + Bulk CSV import.
+	•	Staff: Create/Update/Bulk Import events, cannot delete.
+	•	Filtering by name, contact, venue, date range.
+	•	“Display Event to Monitor” feature with fullscreen public display.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+✅ Frontend (React + Vite)
+	•	Apollo Client for GraphQL.
+	•	Modern UI with role-based restrictions.
+	•	Data validation and error handling.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+✅ Backend (FastAPI + GraphQL)
+	•	Async SQLAlchemy + PostgreSQL for scalability.
+	•	Modular service-based architecture for maintainability.
+	•	GraphQL API for flexible frontend queries.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+⸻
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🛠️ Tech Stack
+	•	Frontend: React, Vite, TypeScript, Apollo Client
+	•	Backend: FastAPI, Ariadne (GraphQL), Async SQLAlchemy, PostgreSQL
+	•	Auth: JWT with role-based middleware
+	•	Deployment:
+	•	Frontend: Netlify
+	•	Backend: Render
+	•	Database: Render PostgreSQL
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+⸻
+
+🔗 Live Demo
+	•	Frontend: https://aung-prplus.netlify.app
+	•	Backend (GraphQL Playground): https://prplus-backend.onrender.com/graphql
+
+⚡ Installation
+
+Backend (FastAPI)
+  # Clone repo
+git clone https://github.com/your-username/prplus-backend.git
+cd prplus-backend
+
+# Create virtual env & install deps
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+
+# Run server
+uvicorn app.main:app --reload
+
+Frontend (React + Vite)
+# Clone repo
+git clone https://github.com/your-username/prplus-frontend.git
+cd prplus-frontend
+
+# Install deps
+npm install
+
+# Run dev server
+npm run dev
+
+
+🧪 Default Manager Account
+	•	Username: manager
+	•	Password: manager123

@@ -36,7 +36,7 @@ A full-stack event management platform with FastAPI + GraphQL backend and React 
 
 🛠️ Tech Stack
 	•	Frontend: React, Vite, TypeScript, Apollo Client
-	•	Backend: FastAPI, Ariadne (GraphQL), Async SQLAlchemy, PostgreSQL
+	•	Backend: Python3, FastAPI, Ariadne (GraphQL), Async SQLAlchemy, PostgreSQL
 	•	Auth: JWT with role-based middleware
 	•	Deployment:
 	•	Frontend: Netlify

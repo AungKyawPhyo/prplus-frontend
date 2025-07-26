@@ -53,7 +53,7 @@ A full-stack event management platform with FastAPI + GraphQL backend and React 
 
 Backend (FastAPI)
   # Clone repo
-git clone https://github.com/your-username/prplus-backend.git
+git clone https://github.com/AungKyawPhyo/prplus-backend.git
 cd prplus-backend
 
 # Create virtual env & install deps
@@ -66,7 +66,7 @@ uvicorn app.main:app --reload
 
 Frontend (React + Vite)
 # Clone repo
-git clone https://github.com/your-username/prplus-frontend.git
+git clone  https://github.com/AungKyawPhyo/prplus-frontend.git
 cd prplus-frontend
 
 # Install deps
